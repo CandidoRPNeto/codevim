@@ -34,6 +34,10 @@ This README serves as a **usage manual**, designed for those who are forgetful (
 * **Comment.nvim** – Quick comments
 * **nvim-treesitter** – Parsing and syntax highlighting
 
+## AI Assistant
+
+* **opencode.nvim** – Open Source Agent
+
 ## Markdown
 
 * **markdown-preview.nvim** – Real-time browser preview
