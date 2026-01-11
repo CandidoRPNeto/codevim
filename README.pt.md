@@ -34,6 +34,11 @@ Este README serve como **manual de uso**, pensado para quem é esquecido (😄),
 * **Comment.nvim** – Comentários rápidos
 * **nvim-treesitter** – Parsing e destaque de sintaxe
 
+## Git
+
+* **f-person/git-blame.nvim** – Informações de blame do git
+* **gitsigns.nvim** – Sinais de git na gutter (diff, navegação de hunk)
+
 ## Markdown
 
 * **markdown-preview.nvim** – Preview em tempo real no navegador
@@ -152,6 +157,16 @@ Este README serve como **manual de uso**, pensado para quem é esquecido (😄),
 | `Space + sj` | Split estrutural  |
 | `Space + sk` | Join estrutural   |
 | `Space + st` | Toggle split/join |
+
+---
+
+## Git (gitsigns)
+
+| Atalho       | Ação                   |
+| ------------ | ---------------------- |
+| `m`          | Próximo hunk           |
+| `Shift + m`  | Hunk anterior          |
+| `Space + gd` | Diff do arquivo        |
 
 ---
 
