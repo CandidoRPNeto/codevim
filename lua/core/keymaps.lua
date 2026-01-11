@@ -130,3 +130,6 @@ end, {
   desc = "Open CodeVim help (English)",
 })
 
+-- Recortar (deletar e copiar)
+vim.keymap.set("n", "<leader>x", "yydd", { desc = "Cut line" })
+vim.keymap.set("v", "<leader>x", "ygvd", { desc = "Cut selection" })
