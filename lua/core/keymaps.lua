@@ -15,17 +15,13 @@ map("n", "<leader>e", "<cmd>NvimTreeToggle<CR>")
 -- formatar arquivo inteiro
 map("n", "<leader>=", "gg=G")
 
--- Ir para definição
-vim.keymap.set("n", "gd", vim.lsp.buf.definition, { desc = "Ir para definição" })
+vim.keymap.set("n", "gd", vim.lsp.buf.definition, { desc = "Go to definition" })
 
--- Ir para declaração (quando existir)
-vim.keymap.set("n", "gD", vim.lsp.buf.declaration, { desc = "Ir para declaração" })
+vim.keymap.set("n", "gD", vim.lsp.buf.declaration, { desc = "Go to declaration" })
 
--- Ver implementações
-vim.keymap.set("n", "gi", vim.lsp.buf.implementation, { desc = "Ir para implementação" })
+vim.keymap.set("n", "gi", vim.lsp.buf.implementation, { desc = "Go to implementation" })
 
--- Ver referências
-vim.keymap.set("n", "gr", vim.lsp.buf.references, { desc = "Ver referências" })
+vim.keymap.set("n", "gr", vim.lsp.buf.references, { desc = "Show references" })
 
 vim.keymap.set("n", "<C-h>", "<C-w>h")
 vim.keymap.set("n", "<C-l>", "<C-w>l")
@@ -34,20 +30,18 @@ vim.keymap.set("n", "<C-k>", "<C-w>k")
 
 vim.keymap.set("n", "<leader>sr", function()
   require("spectre").open_file_search()
-end, { desc = "Substituir no arquivo" })
+end, { desc = "Replace in file" })
 
 vim.keymap.set("n", "<leader>sR", function()
   require("spectre").open()
-end, { desc = "Substituir no projeto" })
+end, { desc = "Replace in project" })
 
--- Próxima aba
 vim.keymap.set("n", "<S-l>", "<cmd>BufferLineCycleNext<CR>", {
-  desc = "Próximo buffer",
+  desc = "Next buffer",
 })
 
--- Aba anterior
 vim.keymap.set("n", "<S-h>", "<cmd>BufferLineCyclePrev<CR>", {
-  desc = "Buffer anterior",
+  desc = "Previous buffer",
 })
 
 vim.keymap.set("n", "<leader>bd", function()
@@ -64,20 +58,20 @@ vim.keymap.set("n", "<leader>bd", function()
     -- agora fecha o buffer original
     vim.cmd("bdelete " .. current)
   end, {
-  desc = "Fechar buffer atual",
+  desc = "Colose this buffer",
 })
 
 
 vim.keymap.set("n", "<leader>bo", "<cmd>BufferLineCloseOthers<CR>", {
-  desc = "Fechar outros buffers",
+  desc = "Close other buffers",
 })
 
 vim.keymap.set("n", "<leader>br", "<cmd>BufferLineCloseRight<CR>", {
-  desc = "Fechar buffers à direita",
+  desc = "Close buffers to the right",
 })
 
 vim.keymap.set("n", "<leader>bl", "<cmd>BufferLineCloseLeft<CR>", {
-  desc = "Fechar buffers à esquerda",
+  desc = "Close buffers to the left",
 })
 
 -- Movimento horizontal inteligente (wrap) para h/l e setas
@@ -113,28 +107,26 @@ pcall(vim.keymap.del, "i", "<Space>t")
 -- Navegar entre mudanças
 vim.keymap.set("n", "m", function()
   require("gitsigns").next_hunk()
-end, { desc = "Próximo hunk" })
+end, { desc = "Next hunk" })
 
 vim.keymap.set("n", "<S-m>", function()
   require("gitsigns").prev_hunk()
-end, { desc = "Hunk anterior" })
+end, { desc = "Previus hunk" })
 
 -- Ver diff do arquivo
 vim.keymap.set("n", "<leader>gd", function()
   require("gitsigns").diffthis()
-end, { desc = "Diff do arquivo" })
+end, { desc = "File diff" })
 
-vim.keymap.set("n", "<leader>he", function()
-  local help_file = vim.fn.stdpath("config") .. "/README.md"
-  vim.cmd("edit " .. help_file)
+vim.keymap.set("n", "<leader>h", function()
+  vim.cmd("CodeVimHelp")
 end, {
-  desc = "Abrir ajuda do CodeVim",
+  desc = "Open CodeVim help",
 })
 
-vim.keymap.set("n", "<leader>hp", function()
-  local help_file = vim.fn.stdpath("config") .. "/README.pt.md"
-  vim.cmd("edit " .. help_file)
+vim.keymap.set("n", "<leader>he", function()
+  vim.cmd("CodeVimHelp en")
 end, {
-  desc = "Abrir ajuda do CodeVim",
+  desc = "Open CodeVim help (English)",
 })
 

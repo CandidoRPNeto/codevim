@@ -5,6 +5,7 @@ require("core.keymaps")
 require("core.autocmds")
 require("core.lazy")
 require("core.lsp")
+require("core.commands")
 
 
 vim.api.nvim_create_autocmd("VimEnter", {

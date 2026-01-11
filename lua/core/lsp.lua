@@ -27,11 +27,10 @@ vim.lsp.config.cssls = {
   filetypes = { "css", "scss", "less" },
 }
 
--- Keymaps globais
-vim.keymap.set("n", "gd", vim.lsp.buf.definition, { desc = "Ir para definição" })
-vim.keymap.set("n", "gr", vim.lsp.buf.references, { desc = "Referências" })
-vim.keymap.set("n", "K", vim.lsp.buf.hover, { desc = "Documentação" })
+vim.keymap.set("n", "gd", vim.lsp.buf.definition, { desc = "Go to definition" })
+vim.keymap.set("n", "gr", vim.lsp.buf.references, { desc = "References" })
+vim.keymap.set("n", "K", vim.lsp.buf.hover, { desc = "Documentation" })
 
 vim.keymap.set("n", "<leader>cf", function()
   vim.lsp.buf.format({ async = true })
-end, { desc = "Formatar arquivo" })
+end, { desc = "Format file" })

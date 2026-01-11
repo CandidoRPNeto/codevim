@@ -1,0 +1,151 @@
+*codevim.txt*  CodeVim Documentation
+==============================================================================
+PLUGINS                             *codevim-plugins*
+
+Interface / UI~                                          *codevim-ui*
+
+    *alpha-nvim*        - Startup screen (dashboard)
+    *bufferline.nvim*   - Tabs/buffers at the top
+    *nvim-tree.lua*     - File explorer
+    *nvim-web-devicons* - Icons
+    *nvim-colorizer.lua*- Inline color visualization
+    *toggleterm.nvim*   - Floating integrated terminal
+
+Search and Navigation~                                 *codevim-search*
+
+    *telescope.nvim*           - File, text, and symbol search
+    *telescope-fzf-native.nvim*- Faster search
+    *flash.nvim*               - EasyMotion-style quick navigation
+    *spectre.nvim*             - Search and replace (file or project)
+
+Code / Productivity~                                    *codevim-code*
+
+    *nvim-lspconfig*   - LSP
+    *mason.nvim*       - LSP server manager
+    *mini.surround*    - Add/remove surrounds
+    *treesj*           - Structural code split/join
+    *nvim-autopairs*   - Automatic closing of pairs
+    *Comment.nvim*     - Quick comments
+    *nvim-treesitter*  - Parsing and syntax highlighting
+
+Git~                                                     *codevim-git*
+
+    *f-person/git-blame.nvim*- Git blame information
+    *gitsigns.nvim*          - Git signs in gutter (diff, hunk navigation)
+
+Markdown~                                               *codevim-markdown*
+
+    *markdown-preview.nvim* - Real-time browser preview
+
+AI Assistant~                                           *codevim-ai*
+
+    *opencode.nvim* - Open Source Agent
+
+==============================================================================
+KEYMAPS (LEADER = SPACE)                     *codevim-keymaps*
+
+Basic~                                                  *codevim-basic*
+
+    <Space>w  Save file
+    <Space>q  Close window
+
+Files and Search~                                      *codevim-files*
+
+    <Space>e   Toggle file explorer
+    <Space>ff  Search files (Telescope)
+    <Space>fg  Search text in project (Live Grep)
+
+LSP / Code~                                             *codevim-lsp*
+
+    gd        Go to definition
+    gD        Go to declaration
+    gi        Go to implementation
+    gr        Show references
+    <Space>=  Format entire file
+
+Window Navigation~                                   *codevim-windows*
+
+    <C-h>  Left window
+    <C-l>  Right window
+    <C-j>  Window below
+    <C-k>  Window above
+
+Buffers / Tabs (Bufferline)~                          *codevim-buffers*
+
+    <S-l>       Next buffer
+    <S-h>       Previous buffer
+    <Space>bp   Pick buffer
+    <Space>bd   Close current buffer
+    <Space>bo   Close other buffers
+    <Space>br   Close buffers to the right
+    <Space>bl   Close buffers to the left
+
+Integrated Terminal (ToggleTerm)~                     *codevim-terminal*
+
+    <Space>t          Open floating terminal
+    <Esc> (in terminal) Exit terminal mode
+    <Space>tq         Terminal 1
+    <Space>tw         Terminal 2
+    <Space>te         Terminal 3
+
+Search & Replace (Spectre)~                         *codevim-spectre*
+
+    <Space>sr  Replace in file
+    <Space>sR  Replace in project
+
+Quick Navigation (Flash)~                            *codevim-flash*
+
+    <Space>j              Jump to text
+    <Space>J              Jump by structures (Treesitter)
+    /                     Interactive search with Flash
+    Visual + <Space>j     Flash on selection
+    Operator + <Space>j   Flash on operators
+
+Surround (mini.surround)~                           *codevim-surround*
+
+    sa  Add surround
+    sd  Remove surround
+    sr  Replace surround
+    sf  Find surround
+    sF  Find to the left
+    sh  Highlight surround
+    sn  Update analyzed lines
+
+Structural Split / Join (TreesJ)~                    *codevim-treesj*
+
+    <Space>sj  Structural split
+    <Space>sk  Structural join
+    <Space>st  Toggle split/join
+
+Git (gitsigns)~                                       *codevim-gitsigns*
+
+    m          Next hunk
+    <S-m>      Previous hunk
+    <Space>gd  File diff
+
+Markdown~                                             *codevim-markdown-keys*
+
+    <Space>mp  Open Markdown preview
+    <Space>ms  Stop preview
+    <Space>mt  Toggle preview
+
+AI Assistant (opencode.nvim)~                        *codevim-opencode*
+
+    <C-a>        Ask opencode
+    <C-x>        Execute opencode action
+    <C-.>        Open/close opencode panel
+    go          Add selection to opencode
+    goo         Add line to opencode
+    <S-C-u>     Scroll half page up
+    <S-C-d>     Scroll half page down
+    +           Increment number
+    -           Decrement number
+
+==============================================================================
+COMANDOS                                          *codevim-commands*
+
+:CodeVimHelp~
+    Open this help file.
+
+=================================================================
+vim:tw=78:ts=8:ft=help:norl:

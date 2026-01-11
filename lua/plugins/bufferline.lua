@@ -7,11 +7,10 @@ return {
         numbers = "ordinal",
         diagnostics = "nvim_lsp",
 
-        -- NvimTree integração
         offsets = {
           {
             filetype = "NvimTree",
-            text = "Explorador",
+            text = "Explorer",
             highlight = "Directory",
             separator = true,
           },

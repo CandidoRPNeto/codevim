@@ -4,6 +4,8 @@ CodeVim is a **Neovim configuration** created to work as a modern, productive, a
 
 This README serves as a **usage manual**, designed for those who are forgetful (😄), and for anyone who wants to open CodeVim and **know exactly how everything works**.
 
+**Help shortcut**: `Space + h` or `:CodeVimHelp` to open documentation inside Neovim (English). Use `:CodeVimHelp pt` for the Portuguese version.
+
 ---
 
 # 📦 Plugins Used

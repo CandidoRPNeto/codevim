@@ -4,6 +4,8 @@ CodeVim é uma **configuração do Neovim**, criada para funcionar como uma IDE 
 
 Este README serve como **manual de uso**, pensado para quem é esquecido (😄), e também para qualquer pessoa que queira abrir o CodeVim e **saber exatamente como tudo funciona**.
 
+**Atalho de ajuda**: `Space + h` ou `:CodeVimHelp` para abrir a documentação dentro do Neovim (português). Use `:CodeVimHelp en` para a versão em inglês.
+
 ---
 
 # 📦 Plugins Utilizados

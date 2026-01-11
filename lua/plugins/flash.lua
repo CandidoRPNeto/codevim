@@ -14,27 +14,23 @@ return {
       },
     })
 
-    local map = vim.keymap.set
+local map = vim.keymap.set
 
-    -- Jump para qualquer texto (estilo EasyMotion)
-    map("n", "<leader>j", function()
-      require("flash").jump()
-    end, { desc = "Flash: pular para texto" })
+map("n", "<leader>j", function()
+  require("flash").jump()
+end, { desc = "Flash: jump to text" })
 
-    -- Jump com padrão Treesitter (funções, blocos, etc)
-    map("n", "<leader>J", function()
-      require("flash").treesitter()
-    end, { desc = "Flash: pular por estruturas" })
+map("n", "<leader>J", function()
+  require("flash").treesitter()
+end, { desc = "Flash: jump by structures" })
 
-    -- Flash em modo visual
-    map("x", "<leader>j", function()
-      require("flash").jump()
-    end, { desc = "Flash: pular (visual)" })
+map("x", "<leader>j", function()
+  require("flash").jump()
+end, { desc = "Flash: jump (visual)" })
 
-    -- Flash baseado em Treesitter (operadores)
-    map("o", "<leader>j", function()
-      require("flash").jump()
-    end, { desc = "Flash: pular (operator)" })
+map("o", "<leader>j", function()
+  require("flash").jump()
+end, { desc = "Flash: jump (operator)" })
   end,
 }
 
