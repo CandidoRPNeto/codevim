@@ -11,6 +11,7 @@ return {
 
     telescope.setup({
       defaults = {
+        file_ignore_patterns = {},
         layout_strategy = "horizontal",
         layout_config = {
           preview_width = 0.55,
@@ -27,6 +28,10 @@ return {
       },
 
       pickers = {
+        find_file = {
+          hidden = false,
+          no_ignore = true
+        },
         live_grep = {
           previewer = true,
         },
