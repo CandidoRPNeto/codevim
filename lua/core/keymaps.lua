@@ -110,4 +110,31 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", { noremap = true, silent = true })
 -- Remove o mapping específico de Insert mode
 pcall(vim.keymap.del, "i", "<Space>t")
 
+-- Navegar entre mudanças
+vim.keymap.set("n", "m", function()
+  require("gitsigns").next_hunk()
+end, { desc = "Próximo hunk" })
+
+vim.keymap.set("n", "<S-m>", function()
+  require("gitsigns").prev_hunk()
+end, { desc = "Hunk anterior" })
+
+-- Ver diff do arquivo
+vim.keymap.set("n", "<leader>gd", function()
+  require("gitsigns").diffthis()
+end, { desc = "Diff do arquivo" })
+
+vim.keymap.set("n", "<leader>he", function()
+  local help_file = vim.fn.stdpath("config") .. "/README.md"
+  vim.cmd("edit " .. help_file)
+end, {
+  desc = "Abrir ajuda do CodeVim",
+})
+
+vim.keymap.set("n", "<leader>hp", function()
+  local help_file = vim.fn.stdpath("config") .. "/README.pt.md"
+  vim.cmd("edit " .. help_file)
+end, {
+  desc = "Abrir ajuda do CodeVim",
+})
 
