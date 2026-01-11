@@ -39,6 +39,10 @@ This README serves as a **usage manual**, designed for those who are forgetful (
 * **f-person/git-blame.nvim** – Git blame information
 * **gitsigns.nvim** – Git signs in gutter (diff, hunk navigation)
 
+## AI Assistant
+
+* **opencode.nvim** – Open Source Agent
+
 ## Markdown
 
 * **markdown-preview.nvim** – Real-time browser preview
