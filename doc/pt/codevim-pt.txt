@@ -58,11 +58,36 @@ Arquivos e Busca~                                    *codevim-files*
 
 LSP / Código~                                          *codevim-lsp*
 
-    gd        Ir para definição
-    gD        Ir para declaração
-    gi        Ir para implementação
-    gr        Ver referências
-    <Space>=  Formatar arquivo inteiro
+    gd         Ir para definição
+    K          Mostrar documentação
+    gi         Ir para implementação
+    gr         Ver referências
+    <Space>ca  Ações de código
+    <Space>rn  Renomear símbolo
+    <Space>=   Formatar arquivo inteiro
+
+Autocomplete (nvim-cmp)~                             *codevim-autocomplete*
+
+    <C-Space>  Disparar autocomplete
+    <C-b>      Rolar documentação para cima
+    <C-f>      Rolar documentação para baixo
+    <C-e>      Fechar menu de autocomplete
+    <Enter>    Confirmar seleção
+
+Treesitter Textobjects~                              *codevim-treesitter*
+
+    af              Selecionar função (around)
+    if              Selecionar função (inner)
+    ac              Selecionar classe (around)
+    ic              Selecionar classe (inner)
+    <Space>fn       Próxima função (início)
+    <Space>fp       Função anterior (início)
+    <Space>fN       Próxima função (fim)
+    <Space>fP       Função anterior (fim)
+    <Space>cn       Próxima classe (início)
+    <Space>cp       Classe anterior (início)
+    <Space>cN       Próxima classe (fim)
+    <Space>cP       Classe anterior (fim)
 
 Navegação entre Janelas~                           *codevim-windows*
 

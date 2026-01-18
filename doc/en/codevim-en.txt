@@ -57,11 +57,36 @@ Files and Search~                                      *codevim-files*
 
 LSP / Code~                                             *codevim-lsp*
 
-    gd        Go to definition
-    gD        Go to declaration
-    gi        Go to implementation
-    gr        Show references
-    <Space>=  Format entire file
+    gd         Go to definition
+    K          Show documentation
+    gi         Go to implementation
+    gr         Show references
+    <Space>ca  Code actions
+    <Space>rn  Rename symbol
+    <Space>=   Format entire file
+
+Autocomplete (nvim-cmp)~                             *codevim-autocomplete*
+
+    <C-Space>  Trigger completion
+    <C-b>      Scroll docs up
+    <C-f>      Scroll docs down
+    <C-e>      Close completion menu
+    <Enter>    Confirm selection
+
+Treesitter Textobjects~                              *codevim-treesitter*
+
+    af              Select function (around)
+    if              Select function (inner)
+    ac              Select class (around)
+    ic              Select class (inner)
+    <Space>fn       Next function (start)
+    <Space>fp       Previous function (start)
+    <Space>fN       Next function (end)
+    <Space>fP       Previous function (end)
+    <Space>cn       Next class (start)
+    <Space>cp       Previous class (start)
+    <Space>cN       Next class (end)
+    <Space>cP       Previous class (end)
 
 Window Navigation~                                   *codevim-windows*
 

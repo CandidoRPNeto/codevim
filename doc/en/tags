@@ -2,6 +2,7 @@ Comment.nvim	codevim-en.txt	/*Comment.nvim*
 alpha-nvim	codevim-en.txt	/*alpha-nvim*
 bufferline.nvim	codevim-en.txt	/*bufferline.nvim*
 codevim-ai	codevim-en.txt	/*codevim-ai*
+codevim-autocomplete	codevim-en.txt	/*codevim-autocomplete*
 codevim-basic	codevim-en.txt	/*codevim-basic*
 codevim-buffers	codevim-en.txt	/*codevim-buffers*
 codevim-code	codevim-en.txt	/*codevim-code*
@@ -20,6 +21,7 @@ codevim-search	codevim-en.txt	/*codevim-search*
 codevim-spectre	codevim-en.txt	/*codevim-spectre*
 codevim-surround	codevim-en.txt	/*codevim-surround*
 codevim-terminal	codevim-en.txt	/*codevim-terminal*
+codevim-treesitter	codevim-en.txt	/*codevim-treesitter*
 codevim-treesj	codevim-en.txt	/*codevim-treesj*
 codevim-ui	codevim-en.txt	/*codevim-ui*
 codevim-windows	codevim-en.txt	/*codevim-windows*

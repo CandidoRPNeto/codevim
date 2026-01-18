@@ -15,7 +15,7 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup("plugins", {
   git = {
     timeout = 300,
-    filter = false, -- 👈 ISSO É O MAIS IMPORTANTE
+    filter = false,
   },
 })
 

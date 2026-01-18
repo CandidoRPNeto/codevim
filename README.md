@@ -74,13 +74,46 @@ This README serves as a **usage manual**, designed for those who are forgetful (
 
 ## LSP / Code
 
-| Shortcut      | Action                     |
-| ------------- | -------------------------- |
-| `gd`          | Go to definition           |
-| `gD`          | Go to declaration          |
-| `gi`          | Go to implementation       |
-| `gr`          | Show references            |
-| `Space + =`   | Format entire file         |
+| Shortcut       | Action                     |
+| -------------- | -------------------------- |
+| `gd`           | Go to definition           |
+| `K`            | Show documentation         |
+| `gi`           | Go to implementation       |
+| `gr`           | Show references            |
+| `Space + ca`   | Code actions               |
+| `Space + rn`   | Rename symbol              |
+| `Space + =`    | Format entire file         |
+
+---
+
+## Autocomplete (nvim-cmp)
+
+| Shortcut       | Action                     |
+| -------------- | -------------------------- |
+| `Ctrl + Space` | Trigger completion         |
+| `Ctrl + b`     | Scroll docs up             |
+| `Ctrl + f`     | Scroll docs down           |
+| `Ctrl + e`     | Close completion menu      |
+| `Enter`        | Confirm selection          |
+
+---
+
+## Treesitter Textobjects (Navigate code structure)
+
+| Shortcut       | Action                          |
+| -------------- | ------------------------------- |
+| `af`           | Select function (around)        |
+| `if`           | Select function (inner)         |
+| `ac`           | Select class (around)           |
+| `ic`           | Select class (inner)            |
+| `Space + fn`   | Next function (start)           |
+| `Space + fp`   | Previous function (start)       |
+| `Space + fN`   | Next function (end)             |
+| `Space + fP`   | Previous function (end)         |
+| `Space + cn`   | Next class (start)              |
+| `Space + cp`   | Previous class (start)         |
+| `Space + cN`   | Next class (end)                |
+| `Space + cP`   | Previous class (end)            |
 
 ---
 
