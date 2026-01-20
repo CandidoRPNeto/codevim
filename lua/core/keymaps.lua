@@ -133,3 +133,15 @@ end, {
 -- Recortar (deletar e copiar)
 vim.keymap.set("n", "<leader>x", "yydd", { desc = "Cut line" })
 vim.keymap.set("v", "<leader>x", "ygvd", { desc = "Cut selection" })
+
+
+map("n", "<leader>nf", function()
+  require("nvim-tree.api").tree.find_file({ open = true, focus = true })
+end, { desc = "NvimTree: focus on file" })
+
+map("n", "<leader>np", function()
+  local path = vim.fn.expand("%:p")
+  vim.fn.setreg("+", path)
+  print("Path copiado: " .. path)
+end, { desc = "copy path" })
+
