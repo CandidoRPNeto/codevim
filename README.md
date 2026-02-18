@@ -72,11 +72,22 @@ This README serves as a **usage manual**, designed for those who are forgetful (
 
 ---
 
+## Visual Mode Search
+
+| Shortcut      | Action                              |
+| ------------- | ----------------------------------- |
+| `v + /`      | Search selected text in file        |
+| `v + f`      | Search selected text with Telescope |
+| `ff`         | Select word (normal mode)           |
+
+---
+
 ## LSP / Code
 
 | Shortcut       | Action                     |
 | -------------- | -------------------------- |
 | `gd`           | Go to definition           |
+| `gD`           | Go to declaration          |
 | `K`            | Show documentation         |
 | `gi`           | Go to implementation       |
 | `gr`           | Show references            |

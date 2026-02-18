@@ -6,6 +6,7 @@ require("core.autocmds")
 require("core.lazy")
 require("core.lsp")
 require("core.commands")
+require("core.search_navigator").setup()
 
 
 vim.api.nvim_create_autocmd("VimEnter", {
@@ -20,3 +21,17 @@ vim.api.nvim_create_autocmd("VimEnter", {
   end,
 })
 
+vim.opt.clipboard = "unnamedplus"
+
+vim.g.clipboard = {
+  name = "xclip",
+  copy = {
+    ["+"] = "xclip -selection clipboard",
+    ["*"] = "xclip -selection primary",
+  },
+  paste = {
+    ["+"] = "xclip -selection clipboard -o",
+    ["*"] = "xclip -selection primary -o",
+  },
+  cache_enabled = 0,
+}

@@ -68,6 +68,16 @@ Este README serve como **manual de uso**, pensado para quem é esquecido (😄),
 
 ---
 
+## Busca em Modo Visual
+
+| Atalho    | Ação                                 |
+| --------- | ----------------------------------- |
+| `v + /`  | Buscar texto selecionado no arquivo |
+| `v + f`  | Buscar texto selecionado no Telescope |
+| `ff`     | Selecionar palavra (modo normal)    |
+
+---
+
 ## LSP / Código
 
 | Atalho      | Ação                     |
@@ -76,6 +86,8 @@ Este README serve como **manual de uso**, pensado para quem é esquecido (😄),
 | `gD`        | Ir para declaração       |
 | `gi`        | Ir para implementação    |
 | `gr`        | Ver referências          |
+| `Space + ca`| Ações de código         |
+| `Space + rn`| Renomear símbolo        |
 | `Space + =` | Formatar arquivo inteiro |
 
 ---
