@@ -149,6 +149,15 @@ map("n", "<leader>dc", function()
   require("dap").continue()
 end, { desc = "DAP: continue" })
 
+map("n", "<leader>/", function()
+  local files = vim.fs.find({ ".env", "config.php" }, { upward = true, limit = 1 })
+  if #files > 0 then
+    vim.cmd("edit " .. files[1])
+  else
+    vim.notify("Arquivo de config não encontrado (.env ou config.php)", vim.log.levels.WARN)
+  end
+end, { desc = "Open config file" })
+
 map("n", "<leader>dr", function()
   require("dap").repl.toggle()
 end, { desc = "DAP: toggle repl" })
