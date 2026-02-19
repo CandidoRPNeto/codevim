@@ -145,3 +145,43 @@ map("n", "<leader>np", function()
   print("Path copiado: " .. path)
 end, { desc = "copy path" })
 
+map("n", "<leader>dc", function()
+  require("dap").continue()
+end, { desc = "DAP: continue" })
+
+map("n", "<leader>dr", function()
+  require("dap").repl.toggle()
+end, { desc = "DAP: toggle repl" })
+
+map("n", "<leader>dl", function()
+  require("dap").run_to_cursor()
+end, { desc = "DAP: run to cursor" })
+
+map("n", "<C-d>n", function()
+  require("dap").step_over()
+end, { desc = "DAP: step over" })
+
+map("n", "<C-d>i", function()
+  require("dap").step_into()
+end, { desc = "DAP: step into" })
+
+map("n", "<C-d>o", function()
+  require("dap").step_out()
+end, { desc = "DAP: step out" })
+
+map("n", "<leader>db", function()
+  require("dap").toggle_breakpoint()
+end, { desc = "DAP: toggle breakpoint" })
+
+map("n", "<leader>dB", function()
+  require("dap").clear_breakpoints()
+end, { desc = "DAP: clear breakpoints" })
+
+map("n", "<leader>ds", function()
+  require("dap").session()
+end, { desc = "DAP: session" })
+
+map("n", "<leader>dt", function()
+  require("dapui").toggle()
+end, { desc = "DAP: toggle UI" })
+
