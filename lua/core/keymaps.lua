@@ -194,3 +194,11 @@ map("n", "<leader>dt", function()
   require("dapui").toggle()
 end, { desc = "DAP: toggle UI" })
 
+map("n", "<leader>go", function()
+  require("core.git_files").open_all()
+end, { desc = "Abrir todos arquivos do git status" })
+
+map("n", "<leader>gp", function()
+  require("core.git_files").pick()
+end, { desc = "Selecionar arquivos do git status" })
+
