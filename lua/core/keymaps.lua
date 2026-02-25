@@ -202,3 +202,7 @@ map("n", "<leader>gp", function()
   require("core.git_files").pick()
 end, { desc = "Selecionar arquivos do git status" })
 
+map("n", "<leader>gc", function()
+  require("core.git_files").compare()
+end, { desc = "Comparar branchs" })
+
