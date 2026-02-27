@@ -7,6 +7,10 @@ return {
           dotfiles = false,
           git_ignored = false
         },
+        update_root = false,
+        git = {
+          enable = false,
+        },
         on_attach = function(bufnr)
           local api = require("nvim-tree.api")
 
@@ -27,6 +31,15 @@ return {
           vim.keymap.set("n", "l", api.node.open.edit, opts("Open"))
           vim.keymap.set("n", "h", api.node.navigate.parent_close, opts("Close Directory"))
         end,
+      })
+      
+      vim.api.nvim_create_autocmd("BufEnter", {
+        callback = function()
+          if vim.fn.isdirectory(vim.g.nvim_initial_cwd or vim.fn.getcwd()) == 1 then
+            require("nvim-tree.api").tree.change_root(vim.g.nvim_initial_cwd or vim.fn.getcwd())
+          end
+        end,
+        once = true,
       })
     end,
   },

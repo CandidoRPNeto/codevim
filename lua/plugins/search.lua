@@ -1,3 +1,23 @@
+if not vim.g.nvim_initial_cwd then
+  vim.g.nvim_initial_cwd = vim.fn.getcwd()
+end
+
+local function get_project_root()
+  local root_patterns = { ".git", "package.json", "Cargo.toml", "go.mod", "pyproject.toml", ".svn", ".hg", "composer.json", "Makefile", ".project" }
+  
+  local cwd = vim.g.nvim_initial_cwd or vim.fn.getcwd()
+  for _, pattern in ipairs(root_patterns) do
+    local match = vim.fs.find(pattern, { upward = true, limit = 1, path = cwd })[1]
+    if match then
+      return vim.fs.dirname(match)
+    end
+  end
+  
+  return cwd
+end
+
+vim.g.project_root = get_project_root()
+
 return {
   "nvim-telescope/telescope.nvim",
   dependencies = {
@@ -19,6 +39,7 @@ return {
         preview = {
           timeout = 200,
         },
+        cwd = vim.g.project_root,
         mappings = {
           i = {
             ["<C-j>"] = actions.move_selection_next,
@@ -28,12 +49,14 @@ return {
       },
 
       pickers = {
-        find_file = {
+        find_files = {
           hidden = false,
-          no_ignore = true
+          no_ignore = true,
+          cwd = vim.g.project_root,
         },
         live_grep = {
           previewer = true,
+          cwd = vim.g.project_root,
         },
       },
     })

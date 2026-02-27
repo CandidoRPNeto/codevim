@@ -15,8 +15,6 @@ map("n", "<leader>e", "<cmd>NvimTreeToggle<CR>")
 -- formatar arquivo inteiro
 map("n", "<leader>=", "gg=G")
 
-vim.keymap.set("n", "gd", vim.lsp.buf.definition, { desc = "Go to definition" })
-
 vim.keymap.set("n", "gD", vim.lsp.buf.declaration, { desc = "Go to declaration" })
 
 vim.keymap.set("n", "gi", vim.lsp.buf.implementation, { desc = "Go to implementation" })
@@ -33,7 +31,7 @@ vim.keymap.set("n", "<leader>sr", function()
 end, { desc = "Replace in file" })
 
 vim.keymap.set("n", "<leader>sR", function()
-  require("spectre").open()
+  require("spectre").open({ cwd = vim.g.nvim_initial_cwd or vim.fn.getcwd() })
 end, { desc = "Replace in project" })
 
 vim.keymap.set("n", "<S-l>", "<cmd>BufferLineCycleNext<CR>", {
@@ -73,6 +71,10 @@ vim.keymap.set("n", "<leader>br", "<cmd>BufferLineCloseRight<CR>", {
 vim.keymap.set("n", "<leader>bl", "<cmd>BufferLineCloseLeft<CR>", {
   desc = "Close buffers to the left",
 })
+
+vim.keymap.set("n", "<leader>ok", function() require("claudecode").chat() end, { desc = "ClaudeCode: Chat/Explain" })
+vim.keymap.set("n", "<leader>oi", function() require("claudecode").chat() end, { desc = "ClaudeCode: Chat/Explain (Alias for gd)" })
+vim.keymap.set("n", "<leader>op", function() require("claudecode").code_action() end, { desc = "ClaudeCode: Code Action (Alias for <leader>ca)" })
 
 -- Movimento horizontal inteligente (wrap) para h/l e setas
 vim.opt.whichwrap:append("h,l,<,>,[,]")

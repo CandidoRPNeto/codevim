@@ -33,7 +33,8 @@ local function get_all_branches()
 end
 
 local function get_diff_files(branch)
-  local handle = io.popen("git diff --name-only " .. branch .. " 2>/dev/null")
+  local project_root = vim.g.nvim_initial_cwd or vim.fn.getcwd()
+  local handle = io.popen("cd " .. vim.fn.fnameescape(project_root) .. " && git diff --name-only " .. branch .. " 2>/dev/null")
   if not handle then
     return {}
   end
@@ -102,7 +103,8 @@ local function compare_branches()
 end
 
 local function get_git_status_files()
-  local handle = io.popen("git status --porcelain 2>/dev/null")
+  local project_root = vim.g.nvim_initial_cwd or vim.fn.getcwd()
+  local handle = io.popen("cd " .. vim.fn.fnameescape(project_root) .. " && git status --porcelain 2>/dev/null")
   if not handle then
     return {}
   end
@@ -123,6 +125,7 @@ end
 
 local function open_all_git_files()
   local files = get_git_status_files()
+  local project_root = vim.g.nvim_initial_cwd or vim.fn.getcwd()
 
   if #files == 0 then
     vim.notify("Nenhum arquivo modificado encontrado", vim.log.levels.INFO)
@@ -130,7 +133,7 @@ local function open_all_git_files()
   end
 
   for _, filepath in ipairs(files) do
-    vim.cmd("edit " .. vim.fn.fnameescape(filepath))
+    vim.cmd("edit " .. vim.fn.fnameescape(project_root .. "/" .. filepath))
   end
 
   vim.notify("Abrindo " .. #files .. " arquivo(s) do git status", vim.log.levels.INFO)
@@ -138,6 +141,7 @@ end
 
 local function pick_git_files()
   local files = get_git_status_files()
+  local project_root = vim.g.nvim_initial_cwd or vim.fn.getcwd()
 
   if #files == 0 then
     vim.notify("Nenhum arquivo modificado encontrado", vim.log.levels.INFO)
@@ -156,7 +160,7 @@ local function pick_git_files()
         local selection = action_state.get_selected_entry()
         if selection then
           actions.close(prompt_bufnr)
-          vim.cmd("edit " .. vim.fn.fnameescape(selection.value))
+          vim.cmd("edit " .. vim.fn.fnameescape(project_root .. "/" .. selection.value))
         end
       end)
       return true
